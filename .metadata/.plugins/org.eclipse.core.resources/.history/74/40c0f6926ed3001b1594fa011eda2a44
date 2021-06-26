@@ -1,0 +1,10 @@
+package webElementPhase;
+
+public class InputBox_Button_link_ImageLink_TextArea {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

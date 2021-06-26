@@ -1,0 +1,36 @@
+package homeTask;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class TaskTwo {
+
+	public static void main(String[] args) {
+		
+		
+		
+		
+		//chrome driver location setup
+		WebDriverManager.chromedriver().setup();
+				
+		//web driver Object Create
+		WebDriver driver = new ChromeDriver();
+				
+				
+		//visit the url
+		driver.get(" https://katalon-demo-cura.herokuapp.com/");
+		
+		
+		//click on the make appointment button by using id locator
+		driver.findElement(By.id("btn-make-appointment")).click();
+		
+		//fill-up username by using name locator
+		driver.findElement(By.name("username")).sendKeys("John Doe");
+		
+		
+	}
+
+}

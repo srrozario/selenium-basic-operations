@@ -1,0 +1,72 @@
+package basicPhase;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WindowType;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class OperationOfWebPage {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.nexchar.com/");
+		
+		//1. capture the title of the web page
+		System.out.println("Title of the web page is: " + driver.getTitle());
+		
+		//2. capture the current url
+		System.out.println("Current url of the web page is: " + driver.getCurrentUrl());
+		
+		//3. capture the page source
+		System.out.println("Page source is: " + driver.getPageSource());
+	 					
+													
+		// 4. window maximize
+		driver.manage().window().maximize();
+		
+		// 5. full screen window
+		driver.manage().window().fullscreen();
+		
+		
+		// 6. delay for 2 sec
+		Thread.sleep(2000);
+		
+		// 7. window minimize
+		driver.manage().window().minimize();
+		
+		
+		// 8. navigate to another url
+		driver.navigate().to("https://demos.telerik.com/");
+		
+		// 9. navigate back to previous website
+		driver.navigate().back();
+		
+		// 10. navigate forward to website
+		driver.navigate().forward();
+		
+		
+		//delay for 3 sec
+		Thread.sleep(3000);
+		
+		// 11. refresh the page by navigate function
+		driver.navigate().refresh();
+		
+		
+		// 12. opening new tab
+		driver.switchTo().newWindow(WindowType.TAB);
+	
+		// 13. opening new url within the new url
+		driver.get("https://demos.telerik.com/");
+		
+		// 14. close the browser
+		driver.close();
+		
+		
+		
+	}
+
+}

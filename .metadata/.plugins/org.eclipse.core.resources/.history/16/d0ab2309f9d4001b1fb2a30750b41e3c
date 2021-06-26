@@ -1,0 +1,47 @@
+package webElementPhase;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class InputBox_Button_link_ImageLink_TextArea {
+
+	public static void main(String[] args) {
+	
+		
+		//chrome driver location setup
+		WebDriverManager.chromedriver().setup();
+		//web driver Object Create
+		WebDriver driver = new ChromeDriver();
+		
+		//visit the url
+		driver.get("https://nexchar.com/signin");
+
+		
+		//1. Id: edit email inputbox1 using id locator
+		
+		driver.findElement(By.id("Email")).sendKeys("gift_shop");
+		
+		//2. Name: edit password box using name locator
+		driver.findElement(By.name("Password")).sendKeys("12345");
+
+		
+		//3. Xpath: show password using xpath locator
+		driver.findElement(By.xpath("//a[@id='show-password']//*[local-name()='svg']")).click();
+		
+		
+		//4. cssSelector: sign-in using cssSelector locator
+		driver.findElement(By.cssSelector("body.antialiased:nth-child(2) div.page:nth-child(1) div.flex-fill.d-flex.flex-column.justify-content-center.py-4 div.container-tight.py-6 form.card.card-md.sm-borderless div.card-body:nth-child(1) div.form-footer:nth-child(5) > button.btn.btn-primary.w-100")).click();
+	
+		
+		driver.navigate().back();
+		
+		// 5. Linktext: link testing using linkText Locator
+		driver.findElement(By.linkText("Contact")).click();
+		
+		
+	}
+
+}

@@ -1,0 +1,41 @@
+package basicPhase;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class TaskOne {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		
+		//chrome driver location setup
+		WebDriverManager.chromedriver().setup();
+		
+		//web driver Object Create
+		WebDriver driver = new ChromeDriver();
+		
+		
+		//visit the url
+		driver.get("http://automationpractice.com/index.php");
+		
+		//capture the current url
+		System.out.println("Current url of the web page is: "+driver.getCurrentUrl());
+		
+		
+		//capture page title
+		System.out.println("Page title of the url is : "+driver.getTitle());
+		
+		//visit www.nexchar.com using navigate method
+		driver.navigate().to("https://www.nexchar.com/");
+		
+		//delay for 5 sec
+		Thread.sleep(5000);
+		
+		//refresh the page by navigate function
+		driver.navigate().refresh();
+		
+	}
+
+}

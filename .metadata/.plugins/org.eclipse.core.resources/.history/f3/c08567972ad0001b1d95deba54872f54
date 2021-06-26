@@ -1,0 +1,38 @@
+package basicPhase;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class LaunchingUrl {
+
+	public static void main(String[] args) {
+		
+	/*	// TODO Auto-generated method stub
+
+		//chrome driver location setup
+		System.setProperty("webdriver.chrome.driver", "G:\\SeleniumQamon\\seleniumTesting\\drivers\\chromeDriver\\chromedriver.exe");
+		
+		// Web Driver Object Create
+		WebDriver driver = new ChromeDriver();
+		
+		//visit the url
+		driver.get("https://demoblaze.com/");
+		
+	*/
+		
+		
+		//firefox driver location setup
+		System.setProperty("webdriver.gecko.driver", "G:\\SeleniumQamon\\seleniumTesting\\drivers\\geckodriver\\geckodriver.exe");
+				
+		// Web Driver Object Create
+		WebDriver driver = new FirefoxDriver();
+				
+		//visit the url
+		driver.get("https://demoblaze.com/");
+		
+		
+		
+	}
+
+}

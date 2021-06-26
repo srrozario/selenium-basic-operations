@@ -1,0 +1,30 @@
+package webElementPhase;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class InputBox_Button_link_ImageLink_TextArea {
+
+	public static void main(String[] args) {
+	
+		
+		//chrome driver location setup
+		WebDriverManager.chromedriver().setup();
+		//web driver Object Create
+		WebDriver driver = new ChromeDriver();
+		
+		//visit the url
+		driver.get("https://nexchar.com/signin");
+
+		
+		//1. Id: edit email inputbox1 using id locator
+		
+		driver.findElement(By.id("Email")).sendKeys("gift_shop");
+		
+		
+	}
+
+}

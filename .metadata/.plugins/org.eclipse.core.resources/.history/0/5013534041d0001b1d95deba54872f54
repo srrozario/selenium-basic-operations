@@ -1,0 +1,38 @@
+package basicPhase;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class LaunchingUrlEasyWay {
+
+	public static void main(String[] args) {
+		
+	/*	// TODO Auto-generated method stub
+		
+		//chrome driver location setup
+		WebDriverManager.chromedriver().setup();
+		
+		// Web Driver Object Create
+		WebDriver driver = new ChromeDriver();
+		
+		//visit the url
+		driver.get("https://demoblaze.com/");
+		
+		*/
+		
+		//firefox driver location setup
+		WebDriverManager.firefoxdriver().setup();
+				
+		// Web Driver Object Create
+		WebDriver driver = new FirefoxDriver();
+				
+		//visit the url
+		driver.get("https://demoblaze.com/");
+				
+		
+	}
+
+}
