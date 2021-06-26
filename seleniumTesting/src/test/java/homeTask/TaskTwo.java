@@ -24,7 +24,8 @@ public class TaskTwo {
 		driver.get(" https://katalon-demo-cura.herokuapp.com/");
 		
 		
-		driver.manage().window().fullscreen();
+		//maximize the browser window
+		driver.manage().window().maximize();
 		
 		
 		
