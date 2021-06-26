@@ -25,7 +25,7 @@ public class TaskTwo {
 		
 		
 		driver.manage().window().fullscreen();
-		/*
+		
 		
 		
 		//delay for 3 sec
@@ -62,7 +62,7 @@ public class TaskTwo {
 		//quit the browser
 		driver.quit();
 		
-		*/
+		
 		
 	}
 
